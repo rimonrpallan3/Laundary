@@ -38,6 +38,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import static android.content.Context.INPUT_METHOD_SERVICE;
+
 /**
  * Created by User on 8/28/2017.
  */
@@ -335,8 +337,29 @@ public class Helper {
 
     }
 
+    /**
+     * Hides the soft keyboard
+     */
+    public static void hideSoftKeyboard(Activity context) {
+        if(context.getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+
+    /**
+     * Shows the soft keyboard
+     */
+    public static void showSoftKeyboard(View view, Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(INPUT_METHOD_SERVICE);
+        view.requestFocus();
+        inputMethodManager.showSoftInput(view, 0);
+    }
+
+
+
     public static void hideKeyboard(Activity activity) {
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(INPUT_METHOD_SERVICE);
         //imm.toggleSoftInput(InputMethodManager.RESULT_HIDDEN,0);
         //Find the currently focused view, so we can grab the correct window token from it.
         View view = activity.getCurrentFocus();

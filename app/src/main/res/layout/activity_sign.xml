@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="top|center">
+        <ImageView
+            android:id="@+id/LoginSignInLogo"
+            android:layout_width="@dimen/_150"
+            android:layout_height="@dimen/_150"
+            android:layout_marginTop="@dimen/_60"
+            android:src="@drawable/cash_on_delivery_icon"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18"
+            android:layout_marginBottom="@dimen/_18"
+            android:text="@string/tv_heading"/>
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15"
+            android:layout_marginRight="@dimen/_15"
+            android:drawableLeft="@drawable/mail"
+            android:drawablePadding="@dimen/_20"
+            android:lines="1"
+            android:hint="@string/ht_email"
+            android:paddingLeft="@dimen/_10"
+            android:textSize="@dimen/_12"
+            app:backgroundTint="@color/edt_txt_underline" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etCPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15"
+                android:layout_marginRight="@dimen/_15"
+                android:drawableLeft="@drawable/lock"
+                android:drawablePadding="@dimen/_20"
+                android:hint="@string/ht_pass3"
+                android:paddingLeft="@dimen/_10"
+                android:lines="1"
+                android:textSize="@dimen/_12"
+                app:backgroundTint="@color/edt_txt_underline" />
+
+            <TextView
+                android:id="@+id/tvForgotPswd"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="@dimen/_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_24"
+                android:textSize="@dimen/_16"
+                android:textColor="@color/forgot_pass"
+                android:onClick="tvForgotPswd"
+                android:text="Forgot ?"/>
+
+
+
+        </FrameLayout>
+
+
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:text="@string/signIn_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/_15"
+            android:layout_marginRight="@dimen/_15"
+            android:textSize="@dimen/_12"
+            android:background="@drawable/rectangle_button"
+            android:layout_marginTop="@dimen/_10"
+            android:onClick="btnSignIn"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18"
+            android:layout_marginBottom="@dimen/_18"
+            android:layout_marginTop="@dimen/_18"
+            android:text="@string/tv_heading2"/>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:text="@string/signUp_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40"
+            android:textColor="@color/default_green"
+            android:layout_marginLeft="@dimen/_15"
+            android:layout_marginRight="@dimen/_15"
+            android:textSize="@dimen/_12"
+            android:background="@drawable/rectangle_button2"
+            android:layout_marginTop="@dimen/_10"
+            android:onClick="btnSignUp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="@dimen/_20"
+        android:layout_height="@dimen/_20"
+        android:onClick="btnHiddenBtn"
+        />
+
+
+
+</FrameLayout>

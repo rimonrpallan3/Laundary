@@ -3,7 +3,7 @@
 
 
     <!-- Sign and SignUp Page-->
-    <string name="signUp_btn">Register</string>
+    <string name="signUp_btn">Register Now</string>
     <string name="signIn_btn">Sign In</string>
     <string name="update_btn">Update</string>
     <string name="gps_network_not_enabled">Please Enable Location</string>
@@ -36,6 +36,15 @@
     <string name="ht_phone">Phone number</string>
     <string name="ht_pass1">Create Password</string>
     <string name="ht_pass2">Confirm Password</string>
+
+    <!-- Sign in Page -->
+    <string name="tv_heading">Sign In Now </string>
+    <string name="tv_heading2">Oh! Not Registered Yet?</string>
+    <string name="ht_email_pass">Email or Phone Number</string>
+    <string name="ht_pass3">Password</string>
+    <string name="tv_forget_pass">Forgot ?</string>
+    <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+    <string name="dialog_seekbar_transition_time">Item transition time in millis</string>
 
 
 </resources>

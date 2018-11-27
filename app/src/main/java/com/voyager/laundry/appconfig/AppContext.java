@@ -1,7 +1,7 @@
 package com.voyager.laundry.appconfig;
 
 
-import com.voyager.sayara.BuildConfig;
+import com.voyager.laundry.BuildConfig;
 
 /**
  * Created by Amine on 9/29/2016.

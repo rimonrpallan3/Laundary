@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_120"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/ivHzList"
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/_80"
+        android:layout_height="@dimen/_80"
+        android:src="@drawable/dry_clean_icon" />
+    <TextView
+        android:id="@+id/tvHzHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10"
+        android:text="Heading"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15"/>
+    <TextView
+        android:id="@+id/tvHzSubHead"
+        android:layout_marginBottom="@dimen/_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SubHeading"
+        android:textSize="@dimen/_10"/>
+</LinearLayout>
