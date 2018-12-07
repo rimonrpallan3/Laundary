@@ -127,15 +127,21 @@ public class HomePage extends Fragment implements
 
     private void populateOrderList(){
         OrderList firstOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                1,"onGoigng" ,
+                1,"Confirmed" ,
                 "247","25 june, 2018",R.drawable.order_confirmed);
         OrderList secondOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                2,"onGoigng" ,"255","25 june, 2018",R.drawable.order_confirmed);
+                2,"Picked up" ,"255","25 june, 2018",R.drawable.order_confirmed);
         OrderList thirdOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                3,"onGoigng" ,"259","25 june, 2018",R.drawable.order_confirmed);
+                3,"In process" ,"259","25 june, 2018",R.drawable.order_confirmed);
+        OrderList fourthOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
+                4,"Dispatched" ,"259","25 june, 2018",R.drawable.order_confirmed);
+        OrderList fifthOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
+                5,"Delivered" ,"259","25 june, 2018",R.drawable.order_confirmed);
         orderLists.add(firstOrder);
         orderLists.add(secondOrder);
         orderLists.add(thirdOrder);
+        orderLists.add(fourthOrder);
+        orderLists.add(fifthOrder);
         orderListAdapter.notifyDataSetChanged();
     }
 
