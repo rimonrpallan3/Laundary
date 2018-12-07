@@ -29,6 +29,10 @@
     <color name="tab_icon_color_unselect">#afafaf</color>
     <color name="grayIconTint">#727272</color>
     <color name="galleryAccent">#FFC107</color>
+    <color name="landing_bg">#FAFAFA</color>
+    <color name="landing_sub_heading">#9E9E9E</color>
+    <color name="card_heading">#333333</color>
+    <color name="text_color_hl">#b7ce1e</color>
 
 
 </resources>

@@ -7,17 +7,20 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.viewpagerindicator.CirclePageIndicator;
 import com.voyager.laundry.R;
+import com.voyager.laundry.fragment.homepage.adapter.OrderListAdapter;
 import com.voyager.laundry.fragment.homepage.adapter.RecyclerViewHorizontalListAdapter;
 import com.voyager.laundry.fragment.homepage.adapter.SlidingImage_Adapter;
+import com.voyager.laundry.fragment.homepage.model.OrderList;
 import com.voyager.laundry.fragment.homepage.model.ServiceItems;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 
@@ -25,8 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * Created by User on 14-Nov-18.
@@ -44,12 +45,16 @@ public class HomePage extends Fragment implements
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
-    private static final Integer[] IMAGES= {R.drawable.one,R.drawable.two,R.drawable.three,R.drawable.five};
+    private static final Integer[] IMAGES= {R.drawable.five,R.drawable.five,R.drawable.three,R.drawable.five};
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
     DiscreteScrollView scrollView;
     private List<ServiceItems> serviceItems = new ArrayList<>();
     private RecyclerView rvHorizontalView;
+    private RecyclerView rvOrderList;
+    private OrderListAdapter orderListAdapter;
+    private List<OrderList> orderLists = new ArrayList<>();
     private RecyclerViewHorizontalListAdapter serviceListAdapter;
+    TextView tvOrderCount;
 
 
     public HomePage() {
@@ -72,9 +77,12 @@ public class HomePage extends Fragment implements
 
         setSliderViews();*/
 
+
+
         initializeData();
         init(rootView);
-        init2(rootView);
+        horizontalList(rootView);
+        orderVerticalList(rootView);
 
 
 
@@ -83,7 +91,7 @@ public class HomePage extends Fragment implements
 
 
 
-    private  void init2(View rootView){
+    private  void horizontalList(View rootView){
         rvHorizontalView = rootView.findViewById(R.id.rvHorizontalView);
         // add a divider after each item for more clarity
         //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
@@ -94,14 +102,41 @@ public class HomePage extends Fragment implements
         populateServiceList();
     }
 
+
+    private void orderVerticalList(View rootView){
+        tvOrderCount = rootView.findViewById(R.id.tvOrderCount);
+        rvOrderList = rootView.findViewById(R.id.rvOrderList);
+        // add a divider after each item for more clarity
+        //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
+        orderListAdapter = new OrderListAdapter(orderLists);
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
+        rvOrderList.setLayoutManager(horizontalLayoutManager);
+        rvOrderList.setAdapter(orderListAdapter);
+        populateOrderList();
+    }
+
     private void populateServiceList(){
-        ServiceItems potato = new ServiceItems("https://www.gstatic.com/webp/gallery/4.sm.jpg","Wash And Fold","Min 12 Hours", R.drawable.shop1);
-        ServiceItems onion = new ServiceItems("https://www.gstatic.com/webp/gallery/4.sm.jpg","Wash And Lorn","Min 6 Hours", R.drawable.shop2);
-        ServiceItems cabbage = new ServiceItems("https://www.gstatic.com/webp/gallery/4.sm.jpg","Dry Clean","Min 24 Hours", R.drawable.shop3);
+        ServiceItems potato = new ServiceItems("https://www.gstatic.com/webp/gallery/4.sm.jpg","Wash And Fold","Min 12 Hours", R.drawable.washing_machine);
+        ServiceItems onion = new ServiceItems("https://www.gstatic.com/webp/gallery/4.sm.jpg","Wash And Lorn","Min 6 Hours", R.drawable.iron_box);
+        ServiceItems cabbage = new ServiceItems("https://www.gstatic.com/webp/gallery/4.sm.jpg","Dry Clean","Min 24 Hours", R.drawable.dry_clean);
         serviceItems.add(potato);
         serviceItems.add(onion);
         serviceItems.add(cabbage);
         serviceListAdapter.notifyDataSetChanged();
+    }
+
+    private void populateOrderList(){
+        OrderList firstOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
+                1,"onGoigng" ,
+                "247","25 june, 2018",R.drawable.order_confirmed);
+        OrderList secondOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
+                2,"onGoigng" ,"255","25 june, 2018",R.drawable.order_confirmed);
+        OrderList thirdOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
+                3,"onGoigng" ,"259","25 june, 2018",R.drawable.order_confirmed);
+        orderLists.add(firstOrder);
+        orderLists.add(secondOrder);
+        orderLists.add(thirdOrder);
+        orderListAdapter.notifyDataSetChanged();
     }
 
    /* private void setSliderViews() {

@@ -39,8 +39,8 @@ public class RecyclerViewHorizontalListAdapter extends RecyclerView.Adapter<Recy
 
     @Override
     public void onBindViewHolder(ServiceViewHolder holder, final int position) {
-        //holder.ivHzList.setImageResource(serviceItems.get(position).getServiceImage());
-        Picasso.with(context).load(serviceItems.get(position).getImageView()).memoryPolicy(MemoryPolicy.NO_CACHE).into(holder.ivHzList);
+        holder.ivHzList.setImageResource(serviceItems.get(position).getServiceImage());
+        //Picasso.with(context).load(serviceItems.get(position).getImageView()).memoryPolicy(MemoryPolicy.NO_CACHE).into(holder.ivHzList);
 
         holder.tvHzHead.setText(serviceItems.get(position).getHeading());
         holder.tvHzSubHead.setText(serviceItems.get(position).getSubHeading());

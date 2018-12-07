@@ -1,4 +1,4 @@
-package com.voyager.laundry.fragment;
+package com.voyager.laundry.fragment.notification;
 
 import android.app.Activity;
 import android.content.SharedPreferences;

@@ -3,7 +3,8 @@
     android:layout_width="240dp"
     android:layout_height="280dp"
     android:layout_margin="4dp"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/image"

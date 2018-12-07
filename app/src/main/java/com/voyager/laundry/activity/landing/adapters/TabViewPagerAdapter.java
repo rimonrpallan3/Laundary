@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.voyager.laundry.fragment.homepage.HomePage;
-import com.voyager.laundry.fragment.Notification;
+import com.voyager.laundry.fragment.notification.Notification;
 import com.voyager.laundry.fragment.OffersPage;
 import com.voyager.laundry.fragment.ProfilePage;
 
