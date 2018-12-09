@@ -1,4 +1,4 @@
-package com.voyager.laundry.fragment;
+package com.voyager.laundry.fragment.couponpage;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -15,7 +15,7 @@ import com.voyager.laundry.R;
  * Created by User on 15-Nov-18.
  */
 
-public class OffersPage extends Fragment {
+public class CouponPage extends Fragment {
 
     // Toolbar toolbar_faith_landing;
     RecyclerView landing_search_filter_language_recycleView;
@@ -23,7 +23,7 @@ public class OffersPage extends Fragment {
     private Activity activity;
     SharedPreferences filter_prefs;
 
-    public OffersPage() {
+    public CouponPage() {
     }
 
 

@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.voyager.laundry.fragment.homepage.HomePage;
 import com.voyager.laundry.fragment.notification.Notification;
-import com.voyager.laundry.fragment.OffersPage;
+import com.voyager.laundry.fragment.couponpage.CouponPage;
 import com.voyager.laundry.fragment.ProfilePage;
 
 /**
@@ -18,7 +18,7 @@ public class TabViewPagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
     HomePage tab1;
     Notification tab2;
-    OffersPage tab3;
+    CouponPage tab3;
     ProfilePage tab4;
 
     Activity activity;
@@ -41,7 +41,7 @@ public class TabViewPagerAdapter extends FragmentStatePagerAdapter {
                 //((MainActivity) activity).setLandingFragment(tab2);
                 return tab2;
             case 2:
-                tab3 = new OffersPage();
+                tab3 = new CouponPage();
                 //((MainActivity) activity).setLandingFragment(tab2);
                 return tab3;
             case 3:

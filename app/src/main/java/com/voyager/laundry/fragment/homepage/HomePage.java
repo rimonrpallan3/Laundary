@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.viewpagerindicator.CirclePageIndicator;
+//import com.viewpagerindicator.CirclePageIndicator;
 import com.voyager.laundry.R;
 import com.voyager.laundry.fragment.homepage.adapter.OrderListAdapter;
 import com.voyager.laundry.fragment.homepage.adapter.RecyclerViewHorizontalListAdapter;
@@ -273,7 +273,7 @@ public class HomePage extends Fragment implements
         mPager.setAdapter(new SlidingImage_Adapter(getActivity(),ImagesArray));
 
 
-        CirclePageIndicator indicator = (CirclePageIndicator)
+        /*CirclePageIndicator indicator = (CirclePageIndicator)
                 rootView.findViewById(R.id.indicator);
 
         indicator.setViewPager(mPager);
@@ -321,7 +321,7 @@ public class HomePage extends Fragment implements
             public void onPageScrollStateChanged(int pos) {
 
             }
-        });
+        });*/
 
     }
 
