@@ -2,10 +2,6 @@ package com.voyager.laundry.fragment.homepage.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 
 /**
  * Created by User on 22-Nov-18.

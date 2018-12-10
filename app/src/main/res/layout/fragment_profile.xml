@@ -63,12 +63,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
+                                android:textSize="@dimen/_20"
                                 android:text="Sam Smith"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_10"
+                                android:layout_marginTop="@dimen/_04"
                                 android:textColor="@color/text_color_hl"
                                 android:text="View profile" />
 

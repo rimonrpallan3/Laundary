@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.Picasso;
 import com.voyager.laundry.R;
 import com.voyager.laundry.fragment.homepage.model.ServiceItems;
 
