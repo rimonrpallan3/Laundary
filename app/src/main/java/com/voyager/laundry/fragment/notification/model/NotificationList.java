@@ -63,6 +63,28 @@ public class NotificationList implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-
+        dest.writeString(this.notificationHeading);
+        dest.writeString(this.notificationSubHeading);
+        dest.writeString(this.notificationTime);
+        dest.writeInt(this.notificationImg);
     }
+
+    protected NotificationList(Parcel in) {
+        this.notificationHeading = in.readString();
+        this.notificationSubHeading = in.readString();
+        this.notificationTime = in.readString();
+        this.notificationImg = in.readInt();
+    }
+
+    public static final Creator<NotificationList> CREATOR = new Creator<NotificationList>() {
+        @Override
+        public NotificationList createFromParcel(Parcel source) {
+            return new NotificationList(source);
+        }
+
+        @Override
+        public NotificationList[] newArray(int size) {
+            return new NotificationList[size];
+        }
+    };
 }

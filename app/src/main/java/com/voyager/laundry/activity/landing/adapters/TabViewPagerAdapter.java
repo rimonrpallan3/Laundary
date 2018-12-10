@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.voyager.laundry.fragment.homepage.HomePage;
 import com.voyager.laundry.fragment.notification.Notification;
 import com.voyager.laundry.fragment.couponpage.CouponPage;
-import com.voyager.laundry.fragment.ProfilePage;
+import com.voyager.laundry.fragment.profilepage.ProfilePage;
 
 /**
  * Created by User on 14-Nov-18.

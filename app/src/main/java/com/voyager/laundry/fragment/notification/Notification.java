@@ -97,6 +97,7 @@ public class Notification extends Fragment {
         rvNotificationList.setLayoutManager(horizontalLayoutManager);
         rvNotificationList.setAdapter(notificationListAdapter);
         populateOrderList();
+
     }
 
     private void populateOrderList(){

@@ -4,10 +4,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.voyager.laundry.R;
+import com.voyager.laundry.fragment.couponpage.model.Coupon;
 import com.voyager.laundry.fragment.notification.model.NotificationList;
 
 import java.util.List;
@@ -18,16 +20,16 @@ import java.util.List;
 
 public class CouponListAdapter extends RecyclerView.Adapter<CouponListAdapter.ViewHolder> {
 
-    private List<NotificationList> notificationLists;
+    private List<Coupon> couponList;
 
-    public CouponListAdapter(List<NotificationList> notificationLists) {
-        this.notificationLists = notificationLists;
+    public CouponListAdapter(List<Coupon> couponList) {
+        this.couponList = couponList;
     }
 
     @Override
     public CouponListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View v = inflater.inflate(R.layout.content_coupon_list, parent, false);
+        View v = inflater.inflate(R.layout.content_cuopon_list, parent, false);
         return new ViewHolder(v);
     }
 
@@ -36,31 +38,29 @@ public class CouponListAdapter extends RecyclerView.Adapter<CouponListAdapter.Vi
         /*Picasso.with(holder.itemView.getContext())
                 .load(orderLists.get(position).getItemOrderImg())
                 .into(holder.ivOrder);*/
-        holder.ivNotification.setImageResource(notificationLists.get(position).getNotificationImg());
-        holder.tvNotificationHeading.setText(notificationLists.get(position).getNotificationHeading());
-        holder.tvNotificationTime.setText(notificationLists.get(position).getNotificationTime());
-        holder.tvNotificationSubHeading.setText(notificationLists.get(position).getNotificationSubHeading());
+
+        holder.tvCouponHeading.setText(couponList.get(position).getCouponHeading());
+        holder.tvCouponSubHeading.setText(couponList.get(position).getCouponSubHeading());
+        holder.btnCoupon.setText(couponList.get(position).getCouponBtnTxt());
 
     }
 
     @Override
     public int getItemCount() {
-        return notificationLists.size();
+        return couponList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView ivNotification;
-        private TextView tvNotificationHeading;
-        private TextView tvNotificationTime;
-        private TextView tvNotificationSubHeading;
+        private TextView tvCouponHeading;
+        private TextView tvCouponSubHeading;
+        private Button btnCoupon;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            ivNotification =  itemView.findViewById(R.id.ivNotification);
-            tvNotificationHeading = itemView.findViewById(R.id.tvNotificationHeading);
-            tvNotificationTime = itemView.findViewById(R.id.tvNotificationTime);
-            tvNotificationSubHeading = itemView.findViewById(R.id.tvNotificationSubHeading);
+            tvCouponHeading = itemView.findViewById(R.id.tvCouponHeading);
+            tvCouponSubHeading = itemView.findViewById(R.id.tvCouponSubHeading);
+            btnCoupon = itemView.findViewById(R.id.btnCoupon);
         }
     }
 }

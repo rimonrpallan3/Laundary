@@ -12,27 +12,17 @@
           android:layout_margin="@dimen/_10"
           android:id="@+id/imageSlider"/>-->
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cvHeadingHeader"
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvBannerList"
+        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/white"
-        app:cardElevation="4dp"
-        app:contentPadding="5dp"
-        android:elevation="@dimen/_04" >
+        android:layout_height="wrap_content">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quick Wash"
-            android:textStyle="bold"
-            android:textSize="@dimen/_18"
-            android:visibility="visible"
-            android:layout_marginTop="@dimen/_20"
-            android:layout_marginLeft="@dimen/_10"
-            android:layout_marginRight="@dimen/_10"/>
-    </android.support.v7.widget.CardView>
+    </android.support.v7.widget.RecyclerView>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -47,7 +37,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentTop="true" />
 
-     <!--   <com.viewpagerindicator.CirclePageIndicator
+        <com.viewpagerindicator.CirclePageIndicator
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +50,6 @@
             app:fillColor="#ff0099"
             app:pageColor="#FF0000"
             app:snap="false" />
--->
     </FrameLayout>
 
 

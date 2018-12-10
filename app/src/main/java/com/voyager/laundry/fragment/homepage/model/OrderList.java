@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by User on 27-Nov-18.
  */
 
-public class OrderList implements Parcelable {
+public class OrderList extends Item implements Parcelable {
 
     String itemOrderImg;
     Integer itemOrderNo;
@@ -15,6 +15,13 @@ public class OrderList implements Parcelable {
     String itemOrderAmt;
     String itemOrderDate;
     int orderImg;
+    public final static String TAG_NAME = "OrderList";
+
+
+    public OrderList(){
+        super();
+        this.type = TAG_NAME;
+    }
 
 
     public OrderList(String itemOrderImg, Integer itemOrderNo, String itemordeStatus, String itemOrderAmt, String itemOrderDate, int orderImg) {
@@ -24,6 +31,7 @@ public class OrderList implements Parcelable {
         this.itemOrderAmt = itemOrderAmt;
         this.itemOrderDate = itemOrderDate;
         this.orderImg = orderImg;
+        this.type = TAG_NAME;
     }
 
     public int getOrderImg() {

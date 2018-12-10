@@ -15,9 +15,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-//import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.CirclePageIndicator;
 import com.voyager.laundry.R;
 import com.voyager.laundry.fragment.homepage.adapter.OrderListAdapter;
+import com.voyager.laundry.fragment.homepage.adapter.RecycleViewSlidingAdapter;
 import com.voyager.laundry.fragment.homepage.adapter.RecyclerViewHorizontalListAdapter;
 import com.voyager.laundry.fragment.homepage.adapter.SlidingImage_Adapter;
 import com.voyager.laundry.fragment.homepage.model.OrderList;
@@ -45,16 +46,18 @@ public class HomePage extends Fragment implements
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
-    private static final Integer[] IMAGES= {R.drawable.five,R.drawable.five,R.drawable.three,R.drawable.five};
+    private static final Integer[] IMAGES= {R.drawable.quickwash_banner,R.drawable.quickwash_banner,R.drawable.quickwash_banner,R.drawable.quickwash_banner};
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
     DiscreteScrollView scrollView;
     private List<ServiceItems> serviceItems = new ArrayList<>();
     private RecyclerView rvHorizontalView;
+    private RecyclerView rvBannerList;
     private RecyclerView rvOrderList;
     private OrderListAdapter orderListAdapter;
     private List<OrderList> orderLists = new ArrayList<>();
     private RecyclerViewHorizontalListAdapter serviceListAdapter;
     TextView tvOrderCount;
+    RecycleViewSlidingAdapter recycleViewSlidingAdapter;
 
 
     public HomePage() {
@@ -71,7 +74,7 @@ public class HomePage extends Fragment implements
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         activity = getActivity();
-       /* sliderLayout = rootView.findViewById(R.id.imageSlider);
+        /*sliderLayout = rootView.findViewById(R.id.imageSlider);
         sliderLayout.setIndicatorAnimation(SliderLayout.Animations.FILL); //set indicator animation by using SliderLayout.Animations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderLayout.setScrollTimeInSec(1); //set scroll delay in seconds :
 
@@ -83,9 +86,14 @@ public class HomePage extends Fragment implements
         init(rootView);
         horizontalList(rootView);
         orderVerticalList(rootView);
-
-
-
+        /*rvBannerList = rootView.findViewById(R.id.rvBannerList);
+        // add a divider after each item for more clarity
+        //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
+        recycleViewSlidingAdapter = new RecycleViewSlidingAdapter(serviceItems, activity);
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false);
+        rvBannerList.setLayoutManager(horizontalLayoutManager);
+        rvBannerList.setAdapter(recycleViewSlidingAdapter);
+*/
         return rootView;
     }
 
@@ -112,6 +120,7 @@ public class HomePage extends Fragment implements
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rvOrderList.setLayoutManager(horizontalLayoutManager);
         rvOrderList.setAdapter(orderListAdapter);
+        rvOrderList.setLayoutFrozen(true);
         populateOrderList();
     }
 
@@ -143,6 +152,7 @@ public class HomePage extends Fragment implements
         orderLists.add(fourthOrder);
         orderLists.add(fifthOrder);
         orderListAdapter.notifyDataSetChanged();
+
     }
 
    /* private void setSliderViews() {
@@ -271,9 +281,7 @@ public class HomePage extends Fragment implements
 
 
         mPager.setAdapter(new SlidingImage_Adapter(getActivity(),ImagesArray));
-
-
-        /*CirclePageIndicator indicator = (CirclePageIndicator)
+        CirclePageIndicator indicator = (CirclePageIndicator)
                 rootView.findViewById(R.id.indicator);
 
         indicator.setViewPager(mPager);
@@ -321,7 +329,7 @@ public class HomePage extends Fragment implements
             public void onPageScrollStateChanged(int pos) {
 
             }
-        });*/
+        });
 
     }
 

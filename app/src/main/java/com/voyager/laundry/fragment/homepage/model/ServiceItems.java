@@ -5,15 +5,24 @@ import android.os.Parcelable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
+
 /**
  * Created by User on 22-Nov-18.
  */
 
-public class ServiceItems implements Parcelable {
+public class ServiceItems extends Item implements Parcelable {
     public String imageView;
     public String heading;
     public String subHeading;
     public int serviceImage;
+    public final static String TAG_NAME = "ServiceItems";
+    protected String type;
+    private boolean enabled=true;
+    public ServiceItems(){
+        super();
+        this.type = TAG_NAME;
+    }
 
     public ServiceItems(String imageView, String heading, String subHeading, int serviceImage) {
         this.imageView = imageView;
