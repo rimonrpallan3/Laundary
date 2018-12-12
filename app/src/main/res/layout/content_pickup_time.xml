@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_10"
+    android:layout_marginRight="@dimen/_10"
+    android:layout_marginTop="@dimen/_10"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <Button
+        android:id="@+id/btnTime1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10"
+        android:layout_weight="50"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="@drawable/button_states" />
+
+    <Button
+        android:id="@+id/btnTime2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="@drawable/button_states" />
+</LinearLayout>

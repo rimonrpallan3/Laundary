@@ -74,26 +74,9 @@ public class HomePage extends Fragment implements
         setHasOptionsMenu(true);
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         activity = getActivity();
-        /*sliderLayout = rootView.findViewById(R.id.imageSlider);
-        sliderLayout.setIndicatorAnimation(SliderLayout.Animations.FILL); //set indicator animation by using SliderLayout.Animations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-        sliderLayout.setScrollTimeInSec(1); //set scroll delay in seconds :
-
-        setSliderViews();*/
-
-
-
-        initializeData();
         init(rootView);
         horizontalList(rootView);
         orderVerticalList(rootView);
-        /*rvBannerList = rootView.findViewById(R.id.rvBannerList);
-        // add a divider after each item for more clarity
-        //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
-        recycleViewSlidingAdapter = new RecycleViewSlidingAdapter(serviceItems, activity);
-        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false);
-        rvBannerList.setLayoutManager(horizontalLayoutManager);
-        rvBannerList.setAdapter(recycleViewSlidingAdapter);
-*/
         return rootView;
     }
 
@@ -137,15 +120,15 @@ public class HomePage extends Fragment implements
     private void populateOrderList(){
         OrderList firstOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
                 1,"Confirmed" ,
-                "247","25 june, 2018",R.drawable.progress1__1_);
+                "12","25 june, 2018",R.drawable.progress1__1_);
         OrderList secondOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                2,"Picked up" ,"255","25 june, 2018",R.drawable.progress2__1_);
+                2,"Picked up" ,"25","25 june, 2018",R.drawable.progress2__1_);
         OrderList thirdOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                3,"In process" ,"259","25 june, 2018",R.drawable.progress3__1_);
+                3,"In process" ,"17","25 june, 2018",R.drawable.progress3__1_);
         OrderList fourthOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                4,"Dispatched" ,"259","25 june, 2018",R.drawable.progress4__1_);
+                4,"Dispatched" ,"12","25 june, 2018",R.drawable.progress4__1_);
         OrderList fifthOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                5,"Delivered" ,"259","25 june, 2018",R.drawable.progress5__1_);
+                5,"Delivered" ,"10","25 june, 2018",R.drawable.progress5__1_);
         orderLists.add(firstOrder);
         orderLists.add(secondOrder);
         orderLists.add(thirdOrder);
@@ -155,99 +138,13 @@ public class HomePage extends Fragment implements
 
     }
 
-   /* private void setSliderViews() {
-
-        for (int i = 0; i <= 3; i++) {
-
-            SliderView sliderView = new SliderView(getActivity());
-
-            switch (i) {
-                case 0:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
-                case 1:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
-                case 2:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-                    break;
-                case 3:
-                    sliderView.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
-            }
-
-            sliderView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
-            sliderView.setDescription("setDescription " + (i + 1));
-            final int finalI = i;
-            sliderView.setOnSliderClickListener(new SliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(SliderView sliderView) {
-                    Toast.makeText(getActivity(), "This is slider " + (finalI + 1), Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            //at last add this view in your layout :
-            sliderLayout.addSliderView(sliderView);
-        }
-    }*/
-
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-
-
-        /*landing_search_filter_language_recycleView.setOnScrollListener(new RecyclerView.OnScrollListener() {
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView,
-                                             int newState) {
-                // TODO Auto-generated method stub
-                if (newState < 1) {
-
-                } else {
-
-                }
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                // TODO Auto-generated method stub
-                if (dy > 0) {
-
-                } else {
-
-                }
-                super.onScrolled(recyclerView, dx, dy);
-            }
-        });*/
-
     }
 
-    /**
-     * This method creates an ArrayList that has Church Notification model class objects
-     */
-    private void initializeData() {
-     /*   languages_events = new ArrayList<>();
-      *//*  filter_prefs = getActivity().getSharedPreferences(Config.FILTER_PREFS, MODE_PRIVATE);
-        ArrayList<String> languagesList = new ArrayList<>(filter_prefs.getStringSet("languages_Set", new HashSet<String>()));
-        if (!languagesList.isEmpty()){
-            for (int i=0; i<languagesList.size(); i++){
-                languages_events.add(new Landing_FilterSearch_Languages(String.valueOf(i+1), languagesList.get(i), false));
-            }
-        }*//*
-
-        languages_events.add(new HomePage("1","English", false));
-        languages_events.add(new HomePage("2","Malayalam", false));
-        languages_events.add(new HomePage("3","Tamil", false));
-        languages_events.add(new HomePage("4","Kannada", false));
-        languages_events.add(new HomePage("5","Hindi", false));
-        languages_events.add(new HomePage("6","Telugu", false));*/
-
-    }
 
     @Override
     public void onResume() {

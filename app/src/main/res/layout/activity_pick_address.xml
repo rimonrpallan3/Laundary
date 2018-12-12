@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvHeadingHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/_04"
+            app:cardElevation="4dp"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBackbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_15"
+                    android:gravity="left|center"
+                    android:src="@drawable/arrow_left" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20"
+                    android:gravity="left|center"
+                    android:text="Select Address"
+                    android:textSize="@dimen/_15"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20"
+                android:layout_marginLeft="@dimen/_20"
+                android:layout_marginTop="@dimen/_20"
+                android:text="Select Pick up and Delivery Address"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100"
+                    android:layout_marginLeft="@dimen/_04"
+                    android:layout_marginRight="@dimen/_10"
+                    android:layout_weight="33"
+                    android:onClick="homeClick"
+                    app:cardCornerRadius="@dimen/_04">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivHome"
+                            android:layout_width="@dimen/_40"
+                            android:layout_height="@dimen/_40"
+                            android:gravity="left|center"
+                            android:src="@drawable/home_link" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10"
+                            android:gravity="left|center"
+                            android:text="Home"
+                            android:textSize="@dimen/_15"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100"
+                    android:layout_weight="33"
+                    android:onClick="officeClick"
+                    app:cardCornerRadius="@dimen/_04">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivOffice"
+                            android:layout_width="@dimen/_40"
+                            android:layout_height="@dimen/_40"
+                            android:gravity="left|center"
+                            android:src="@drawable/office" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10"
+                            android:gravity="left|center"
+                            android:text="Office"
+                            android:textSize="@dimen/_15"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100"
+                    android:layout_marginLeft="@dimen/_10"
+                    android:layout_marginRight="@dimen/_04"
+                    android:layout_weight="33"
+                    android:onClick="othersClick"
+                    app:cardCornerRadius="@dimen/_04">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivloc"
+                            android:layout_width="@dimen/_40"
+                            android:layout_height="@dimen/_40"
+                            android:gravity="left|center"
+                            android:src="@drawable/location_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10"
+                            android:gravity="left|center"
+                            android:text="Other"
+                            android:textSize="@dimen/_15"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivPointer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|left"
+                    android:layout_gravity="bottom|left"
+                    android:layout_marginLeft="@dimen/_40"
+                    android:src="@drawable/ic_arrow_drop_up" />
+
+
+                <ImageView
+                    android:id="@+id/ivPointer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:gravity="bottom|center"
+                    android:layout_gravity="bottom|center"
+                    android:src="@drawable/ic_arrow_drop_up" />
+
+
+                <ImageView
+                    android:id="@+id/ivPointer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_40"
+                    android:visibility="visible"
+                    android:layout_gravity="bottom|right"
+                    android:gravity="bottom|right"
+                    android:src="@drawable/ic_arrow_drop_up" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_50">
+
+
+                <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Bottom Layout-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50"
+            android:background="@color/text_color_hl"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10"
+                android:layout_marginTop="@dimen/_10"
+                android:text="Amount payable"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10"
+                android:layout_marginTop="@dimen/_10"
+                android:text="25.00 BD"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18" />
+
+
+            <LinearLayout
+                android:id="@+id/llContBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10"
+                    android:gravity="right|center"
+                    android:src="@drawable/right_arrow" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

@@ -38,9 +38,9 @@ public class Landing extends AppCompatActivity {
         vpLanding = (ViewPager) findViewById(R.id.vpLanding);
         tbLanding = (TabLayout) findViewById(R.id.tbLanding);
         tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.home));
-        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.notification_link_active));
-        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.offers_link_active));
-        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.profile_link_active));
+        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.notification_link));
+        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.offers_link));
+        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.profile_link));
         //tbLanding.setSelectedTabIndicatorGravity(INDICATOR_GRAVITY_TOP);
         tbLanding.setTabGravity(TabLayout.GRAVITY_FILL);
 

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.voyager.laundry.R;
+import com.voyager.laundry.activity.address.PickAddress;
 import com.voyager.laundry.activity.landing.Landing;
 import com.voyager.laundry.activity.review.adapter.ClothsWashListAdapter;
 import com.voyager.laundry.activity.review.model.ClothOrderedLsit;
@@ -48,7 +49,7 @@ public class ReviewOrder extends AppCompatActivity {
         llContBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Landing.class);
+                Intent intent = new Intent(getApplicationContext(), PickAddress.class);
                 startActivity(intent);
             }
         });
