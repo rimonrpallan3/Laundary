@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBackbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15"
+            android:gravity="left|center"
+            android:onClick="ivBackbtn"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_20"
+            android:gravity="left|center"
+            android:text="Enter OTP"
+            android:textSize="@dimen/_15"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_40">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let us know one time password (OTP) we will send OTP on registered email address or phone number"
+            android:layout_marginRight="@dimen/_50"
+            android:layout_marginLeft="@dimen/_50"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10"
+            android:layout_marginRight="@dimen/_10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_40"
+            android:hint="Enter One time Password"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20"
+            android:layout_marginLeft="@dimen/_10"
+            android:layout_marginRight="@dimen/_10"
+            android:text="Submit"
+            android:onClick="btnOTPSubmit"
+            android:textColor="@color/white"
+            android:elevation="@dimen/_10"
+            android:background="@drawable/rectangle_button"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

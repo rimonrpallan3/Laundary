@@ -137,15 +137,15 @@ public class HomePage extends Fragment implements
     private void populateOrderList(){
         OrderList firstOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
                 1,"Confirmed" ,
-                "247","25 june, 2018",R.drawable.order_confirmed);
+                "247","25 june, 2018",R.drawable.progress1__1_);
         OrderList secondOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                2,"Picked up" ,"255","25 june, 2018",R.drawable.order_confirmed);
+                2,"Picked up" ,"255","25 june, 2018",R.drawable.progress2__1_);
         OrderList thirdOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                3,"In process" ,"259","25 june, 2018",R.drawable.order_confirmed);
+                3,"In process" ,"259","25 june, 2018",R.drawable.progress3__1_);
         OrderList fourthOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                4,"Dispatched" ,"259","25 june, 2018",R.drawable.order_confirmed);
+                4,"Dispatched" ,"259","25 june, 2018",R.drawable.progress4__1_);
         OrderList fifthOrder = new OrderList("https://www.gstatic.com/webp/gallery/4.sm.jpg",
-                5,"Delivered" ,"259","25 june, 2018",R.drawable.order_confirmed);
+                5,"Delivered" ,"259","25 june, 2018",R.drawable.progress5__1_);
         orderLists.add(firstOrder);
         orderLists.add(secondOrder);
         orderLists.add(thirdOrder);

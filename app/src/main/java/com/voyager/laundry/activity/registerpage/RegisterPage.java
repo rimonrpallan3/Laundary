@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import com.voyager.laundry.MainActivity;
 import com.voyager.laundry.R;
 import com.voyager.laundry.activity.landing.Landing;
+import com.voyager.laundry.activity.otppage.OTPPage;
 import com.voyager.laundry.common.Helper;
 import com.voyager.laundry.common.NetworkDetector;
 import com.voyager.laundry.costom.CircleImageView;
@@ -90,7 +91,7 @@ public class RegisterPage extends AppCompatActivity implements IRegisterView {
                     etNo.getText().toString(),
                     etNo.getText().toString(),
                     country.toString())*/;
-            Intent intent = new Intent(this, Landing.class);
+            Intent intent = new Intent(this, OTPPage.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
             setResult(REQUEST_REGISTERED);
             startActivity(intent);

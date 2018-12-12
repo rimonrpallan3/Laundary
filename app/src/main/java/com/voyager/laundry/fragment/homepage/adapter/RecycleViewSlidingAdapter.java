@@ -7,14 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.viewpagerindicator.CirclePageIndicator;
 import com.voyager.laundry.R;
 import com.voyager.laundry.fragment.homepage.model.HeaderItem;
-import com.voyager.laundry.fragment.homepage.model.ServiceItems;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +28,7 @@ public class RecycleViewSlidingAdapter extends RecyclerView.Adapter<RecycleViewS
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
 
-    private static final Integer[] IMAGES= {R.drawable.five,R.drawable.five,R.drawable.three,R.drawable.five};
+    private static final Integer[] IMAGES= {R.drawable.quickwash_banner,R.drawable.quickwash_banner,R.drawable.quickwash_banner,R.drawable.quickwash_banner};
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
 
     public RecycleViewSlidingAdapter(List<HeaderItem> headerItems, Context context){

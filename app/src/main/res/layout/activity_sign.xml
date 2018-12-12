@@ -18,7 +18,7 @@
             android:layout_width="@dimen/_150"
             android:layout_height="@dimen/_150"
             android:layout_marginTop="@dimen/_60"
-            android:src="@drawable/cash_on_delivery_icon"
+            android:src="@drawable/laundry_logo"
             android:textAllCaps="false" />
 
         <TextView

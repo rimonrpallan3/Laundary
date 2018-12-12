@@ -4,10 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:layout_marginTop="@dimen/_10"
-    android:layout_marginLeft="@dimen/_20"
-    android:layout_marginRight="@dimen/_20"
-    android:layout_marginBottom="@dimen/_10"
+    android:layout_margin="@dimen/_20"
     app:cardElevation="2dp"
     app:cardCornerRadius="4dp"
     app:contentPadding="5dp"
@@ -19,43 +16,12 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-        <LinearLayout
+
+        <ImageView
+            android:id="@+id/ivOrder"
             android:layout_width="@dimen/_80"
             android:layout_height="@dimen/_80"
-            android:orientation="vertical"
-            android:layout_marginRight="@dimen/_15">
-
-            <FrameLayout
-                android:id="@+id/frame_image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_08"
-                android:layout_marginLeft="@dimen/_12">
-
-
-
-                <com.voyager.laundry.costom.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/civOrder"
-                    android:layout_width="@dimen/_80"
-                    android:layout_height="@dimen/_80"
-                    android:layout_gravity="center"
-                    android:src="@android:drawable/dialog_holo_dark_frame"
-                    app:civ_border="true"
-                    app:civ_border_color="@color/colorPrimary"
-                    app:civ_border_width="2dp" />
-                <ImageView
-                    android:id="@+id/ivOrder"
-                    android:layout_width="@dimen/_70"
-                    android:layout_height="@dimen/_70"
-                    android:layout_marginRight="@dimen/_15" />
-
-            </FrameLayout>
-
-
-        </LinearLayout>
-
+            android:layout_marginRight="@dimen/_15" />
 
         <LinearLayout
             android:layout_width="wrap_content"
