@@ -16,6 +16,8 @@
 
             <include
                 layout="@layout/content_pickup_body"
+                android:layout_marginTop="@dimen/_10"
+                android:layout_marginBottom="@dimen/_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

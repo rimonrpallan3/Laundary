@@ -39,6 +39,7 @@
         android:id="@+id/rvOrderList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20"
         android:orientation="horizontal">
 
     </android.support.v7.widget.RecyclerView>
