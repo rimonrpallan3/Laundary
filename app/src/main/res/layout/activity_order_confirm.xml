@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvHeadingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/_04"
+        app:cardElevation="4dp"
+        app:contentPadding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBackbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_15"
+                android:gravity="left|center"
+                android:onClick="ivBackbtn"
+                android:src="@drawable/arrow_left" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_27"
+                    android:text="Order No. 22145052"
+                    android:textSize="@dimen/_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10"
+                    android:layout_marginRight="@dimen/_27"
+                    android:text="09 September, 2018"
+                    android:textColor="@color/default_line_indicator_unselected_color"
+                    android:textSize="@dimen/_10"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <com.voyager.laundry.costom.CircleImageView
+                    android:id="@+id/civProfile"
+                    android:layout_width="@dimen/_90"
+                    android:layout_height="@dimen/_90"
+                    android:layout_margin="@dimen/_20"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Status"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_04"
+                        android:text="Order Confirmed"
+                        android:textColor="@color/text_color_hl"
+                        android:textSize="@dimen/_15"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/_10"
+                        android:layout_marginLeft="@dimen/_20"
+                        android:layout_marginTop="@dimen/_20">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/default_line_indicator_unselected_color"
+                            android:text="Pick Up" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/default_line_indicator_unselected_color"
+                            android:text="Delivery" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_20">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:text="Today, 08 September" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Tomorrow, 09 September" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_20">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12"
+                            android:textColor="@color/default_line_indicator_unselected_color"
+                            android:text="01:00pm- 02:00pm" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_12"
+                            android:textColor="@color/default_line_indicator_unselected_color"
+                            android:text="01:00pm- 02:00pm" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_20"
+                        android:layout_marginLeft="@dimen/_20">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textSize="@dimen/_12"
+                            android:textColor="@color/default_line_indicator_unselected_color"
+                            android:text="Delivery" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10"
+                            android:textSize="@dimen/_12"
+                            android:text="B11 Old ford Street, Workshop tower zero ground (US)" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10"
+                    android:layout_marginTop="@dimen/_10"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10"
+                            android:text="Your Cloth list"
+                            android:textColor="@color/default_line_indicator_unselected_color" />
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvReviewOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/_50"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10"
+                                    android:layout_marginLeft="@dimen/_10"
+                                    android:layout_marginTop="@dimen/_10"
+                                    android:text="Sub Total"
+                                    android:textColor="@color/tab_icon_color_unselect" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10"
+                                    android:layout_marginLeft="@dimen/_10"
+                                    android:layout_marginRight="@dimen/_20"
+                                    android:layout_marginTop="@dimen/_10"
+                                    android:gravity="right"
+                                    android:text="20 BD"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10"
+                                    android:layout_marginLeft="@dimen/_10"
+                                    android:layout_marginTop="@dimen/_10"
+                                    android:text="Tax"
+                                    android:textColor="@color/tab_icon_color_unselect" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10"
+                                    android:layout_marginLeft="@dimen/_10"
+                                    android:layout_marginRight="@dimen/_20"
+                                    android:layout_marginTop="@dimen/_10"
+                                    android:gravity="right"
+                                    android:text="5 BD"
+                                    android:textColor="@color/black" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10"
+                                    android:layout_marginLeft="@dimen/_10"
+                                    android:layout_marginTop="@dimen/_10"
+                                    android:text="Payable Amount"
+                                    android:textColor="@color/default_green"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_10"
+                                    android:layout_marginLeft="@dimen/_10"
+                                    android:layout_marginRight="@dimen/_20"
+                                    android:layout_marginTop="@dimen/_10"
+                                    android:gravity="right"
+                                    android:text="25 BD"
+                                    android:textColor="@color/default_green"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50"
+                    android:layout_gravity="bottom"
+                    android:background="@color/text_color_hl"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_20"
+                            android:gravity="right"
+                            android:text="Rate Me now"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_20" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_10"
+                            android:gravity="right|center"
+                            android:src="@drawable/right_arrow"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Card Details"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/_20"
+        android:layout_marginTop="@dimen/_20"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Card Number"
+        android:layout_marginRight="@dimen/_10"
+        android:layout_marginLeft="@dimen/_10"
+        android:layout_marginTop="@dimen/_20"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:hint="Month"
+            android:layout_marginRight="@dimen/_10"
+            android:layout_marginLeft="@dimen/_10"
+            android:layout_marginTop="@dimen/_20"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:hint="Year"
+            android:layout_marginRight="@dimen/_10"
+            android:layout_marginLeft="@dimen/_10"
+            android:layout_marginTop="@dimen/_20"/>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CVV"
+        android:layout_marginRight="@dimen/_10"
+        android:layout_marginLeft="@dimen/_10"
+        android:layout_marginTop="@dimen/_20"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_20">
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:hint="Save card info for quick payment in future"
+            android:layout_marginRight="@dimen/_10"
+            android:layout_marginLeft="@dimen/_10"
+            android:layout_marginTop="@dimen/_20"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

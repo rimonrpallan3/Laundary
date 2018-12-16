@@ -38,7 +38,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/_20"
                     android:gravity="left|center"
-                    android:text="Select Address"
+                    android:text="Payment"
                     android:textSize="@dimen/_15"
                     android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
                 android:layout_marginBottom="@dimen/_20"
                 android:layout_marginLeft="@dimen/_20"
                 android:layout_marginTop="@dimen/_20"
-                android:text="Select Pick up and Delivery Address"
+                android:text="Select Payment Method"
                 android:textColor="@color/black" />
 
             <LinearLayout
@@ -73,7 +73,7 @@
                     android:layout_marginLeft="@dimen/_04"
                     android:layout_marginRight="@dimen/_10"
                     android:layout_weight="33"
-                    android:onClick="homeClick"
+                    android:onClick="debitClick"
                     app:cardCornerRadius="@dimen/_04">
 
                     <LinearLayout
@@ -85,18 +85,17 @@
 
                         <ImageView
                             android:id="@+id/ivHome"
-                            android:layout_width="@dimen/_40"
-                            android:layout_height="@dimen/_40"
+                            android:layout_width="@dimen/_90"
+                            android:layout_height="@dimen/_70"
                             android:gravity="left|center"
-                            android:src="@drawable/home_link" />
+                            android:src="@drawable/debit_card" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10"
                             android:gravity="left|center"
-                            android:text="Home"
-                            android:textSize="@dimen/_15"
+                            android:text="Debit Card"
+                            android:textSize="@dimen/_11"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -113,7 +112,7 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/_100"
                     android:layout_weight="33"
-                    android:onClick="officeClick"
+                    android:onClick="creditClick"
                     app:cardCornerRadius="@dimen/_04">
 
                     <LinearLayout
@@ -125,18 +124,17 @@
 
                         <ImageView
                             android:id="@+id/ivOffice"
-                            android:layout_width="@dimen/_40"
-                            android:layout_height="@dimen/_40"
+                            android:layout_width="@dimen/_90"
+                            android:layout_height="@dimen/_70"
                             android:gravity="left|center"
-                            android:src="@drawable/office" />
+                            android:src="@drawable/credit_card" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10"
                             android:gravity="left|center"
-                            android:text="Office"
-                            android:textSize="@dimen/_15"
+                            android:text="Credit Card"
+                            android:textSize="@dimen/_11"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -155,7 +153,7 @@
                     android:layout_marginLeft="@dimen/_10"
                     android:layout_marginRight="@dimen/_04"
                     android:layout_weight="33"
-                    android:onClick="othersClick"
+                    android:onClick="CODClick"
                     app:cardCornerRadius="@dimen/_04">
 
                     <LinearLayout
@@ -167,18 +165,17 @@
 
                         <ImageView
                             android:id="@+id/ivloc"
-                            android:layout_width="@dimen/_40"
-                            android:layout_height="@dimen/_40"
+                            android:layout_width="@dimen/_90"
+                            android:layout_height="@dimen/_70"
                             android:gravity="left|center"
-                            android:src="@drawable/location_icon" />
+                            android:src="@drawable/cash_on_delivery" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10"
                             android:gravity="left|center"
-                            android:text="Other"
-                            android:textSize="@dimen/_15"
+                            android:text="cash on delevery"
+                            android:textSize="@dimen/_11"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -269,7 +266,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10"
                 android:layout_marginTop="@dimen/_10"
-                android:text="Amount payable"
+                android:text="Amount payable :"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_18" />
 

@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.voyager.laundry.R;
 import com.voyager.laundry.activity.datetime.adapter.DPTabViewPagerAdapter;
+import com.voyager.laundry.activity.payment.Payment;
 import com.voyager.laundry.activity.review.ReviewOrder;
 import com.voyager.laundry.common.Helper;
 
@@ -105,7 +106,7 @@ public class DateTime extends AppCompatActivity {
         llContBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ReviewOrder.class);
+                Intent intent = new Intent(getApplicationContext(), Payment.class);
                 startActivity(intent);
             }
         });

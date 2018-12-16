@@ -4,32 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <LinearLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvHeadingHeader"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:orientation="horizontal">
+        android:background="@color/white"
+        android:elevation="@dimen/_04"
+        app:cardElevation="@dimen/_04"
+        app:contentPadding="5dp">
 
-        <ImageView
-            android:id="@+id/ivBackbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/_15"
-            android:gravity="left|center"
-            android:onClick="ivBackbtn"
-            android:src="@drawable/arrow_left" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/_20"
-            android:gravity="left|center"
-            android:text="Select Clothes"
-            android:textSize="@dimen/_15"
-            android:textStyle="bold" />
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBackbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_15"
+                android:gravity="left|center"
+                android:onClick="ivBackbtn"
+                android:src="@drawable/arrow_left" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_20"
+                android:gravity="left|center"
+                android:text="Select Clothes"
+                android:textSize="@dimen/_15"
+                android:textStyle="bold" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
     <FrameLayout
         android:id="@+id/flClothsTab"
@@ -51,8 +60,8 @@
                 android:background="@color/white"
                 android:elevation="@dimen/_10"
                 app:tabIndicatorColor="@color/default_green"
-                app:tabTextColor="@color/tab_icon_color_unselect"
-                app:tabSelectedTextColor="@color/default_green"/>
+                app:tabSelectedTextColor="@color/default_green"
+                app:tabTextColor="@color/tab_icon_color_unselect" />
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/vpCloths"
@@ -139,12 +148,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10"
                     android:gravity="right|center"
-                    android:src="@drawable/right_arrow"
-                    android:layout_marginRight="@dimen/_10"/>
-
-
-
+                    android:src="@drawable/right_arrow" />
 
 
             </LinearLayout>
