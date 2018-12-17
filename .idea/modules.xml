@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Laundary.iml" filepath="$PROJECT_DIR$/Laundary.iml" />
+      <module fileurl="file://C:\Users\User\AndroidStudioProjects\Laundry\Laundary.iml" filepath="C:\Users\User\AndroidStudioProjects\Laundry\Laundary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laundry.iml" filepath="$PROJECT_DIR$/Laundry.iml" />
       <module fileurl="file://C:\Users\rimon\StudioProjects\Laundary\Laundry.iml" filepath="C:\Users\rimon\StudioProjects\Laundary\Laundry.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />

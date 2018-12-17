@@ -3,6 +3,7 @@ package com.voyager.laundry.activity.orderpage;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.IntentCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +16,7 @@ import com.voyager.laundry.activity.orderpage.adapter.OrderWashListAdapter;
 import com.voyager.laundry.activity.ratepage.RatePage;
 import com.voyager.laundry.activity.review.adapter.ClothsWashListAdapter;
 import com.voyager.laundry.activity.review.model.ClothOrderedLsit;
+import com.voyager.laundry.common.Helper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +51,11 @@ public class OrderConfirm extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RatePage.class);
-                startActivity(intent);
+                intent.putExtra("orderConfirm","true");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                        | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivityForResult(intent, Helper.REQUEST_LOGEDIN);
+                finish();
             }
         });
     }

@@ -1,5 +1,6 @@
 package com.voyager.laundry.activity.landing;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 
@@ -9,10 +10,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.voyager.laundry.R;
 import com.voyager.laundry.activity.landing.adapters.TabViewPagerAdapter;
 import com.voyager.laundry.common.Helper;
+import com.voyager.laundry.fragment.homepage.HomePage;
 
 /**
  * Created by User on 14-Nov-18.
@@ -37,7 +40,7 @@ public class Landing extends AppCompatActivity {
 
         vpLanding = (ViewPager) findViewById(R.id.vpLanding);
         tbLanding = (TabLayout) findViewById(R.id.tbLanding);
-        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.home));
+        tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.home_link_active));
         tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.notification_link));
         tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.offers_link));
         tbLanding.addTab(tbLanding.newTab().setIcon(R.drawable.profile_link));
@@ -83,6 +86,22 @@ public class Landing extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        System.out.println("Landing onActivityResult");
+        if (resultCode==1000){
+        if (data != null) {
+            String orderConfirm = data.getStringExtra("orderConfirm");
+            if (orderConfirm != null) {
+                System.out.println("Your order has been confirmed : " + orderConfirm);
+                Toast.makeText(getApplicationContext(), "" + orderConfirm, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
     }
 
 

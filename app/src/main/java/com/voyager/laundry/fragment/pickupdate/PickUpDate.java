@@ -1,10 +1,8 @@
 package com.voyager.laundry.fragment.pickupdate;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,13 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.voyager.laundry.R;
-import com.voyager.laundry.fragment.homepage.adapter.OrderListAdapter;
-import com.voyager.laundry.fragment.homepage.adapter.RecycleViewSlidingAdapter;
-import com.voyager.laundry.fragment.homepage.adapter.RecyclerViewHorizontalListAdapter;
-import com.voyager.laundry.fragment.homepage.model.OrderList;
-import com.voyager.laundry.fragment.homepage.model.ServiceItems;
-import com.voyager.laundry.fragment.others.adapter.OthersListAdapter;
-import com.voyager.laundry.fragment.others.model.Other;
 import com.voyager.laundry.fragment.pickupdate.adapter.DateHorizontalListAdapter;
 import com.voyager.laundry.fragment.pickupdate.adapter.TimeListAdapter;
 import com.voyager.laundry.fragment.pickupdate.model.Date;

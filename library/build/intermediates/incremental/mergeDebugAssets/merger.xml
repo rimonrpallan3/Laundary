@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\rimon\StudioProjects\Laundary\library\src\main\assets"/><source path="C:\Users\rimon\StudioProjects\Laundary\library\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="C:\Users\rimon\StudioProjects\Laundary\library\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\User\AndroidStudioProjects\Laundry\library\src\main\assets"/><source path="C:\Users\User\AndroidStudioProjects\Laundry\library\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="C:\Users\User\AndroidStudioProjects\Laundry\library\src\debug\assets"/></dataSet></merger>
