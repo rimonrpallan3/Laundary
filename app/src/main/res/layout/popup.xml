@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10"
+        android:visibility="gone"
+        android:textColor="@color/default_green"
+        android:text="T Shirt Wash Only 2BD"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10"
+        android:background="@color/default_line_indicator_unselected_color"/>
+
+    <CheckBox
+        android:id="@+id/cbFirstCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10"
+        android:layout_marginRight="@dimen/_10"
+        android:layout_marginLeft="@dimen/_10"
+        android:hint="Wash Only 3BD"/>
+
+    <CheckBox
+        android:id="@+id/cbSecondCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10"
+        android:layout_marginRight="@dimen/_10"
+        android:layout_marginLeft="@dimen/_10"
+        android:hint="Iron Only 1BD"/>
+
+    <CheckBox
+        android:id="@+id/cbThirdCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10"
+        android:layout_marginRight="@dimen/_10"
+        android:layout_marginLeft="@dimen/_10"
+        android:layout_marginBottom="@dimen/_10"
+        android:hint="Dry Clean 5BD"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/default_line_indicator_unselected_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:weightSum="100"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPopCancel"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:layout_height="@dimen/_20"
+            android:layout_marginRight="@dimen/_10"
+            android:textColor="@color/default_green"
+            android:layout_marginTop="@dimen/_04"
+            android:layout_marginBottom="@dimen/_04"
+            android:textSize="@dimen/_10"
+            android:background="@drawable/rectangle_popup_button2"
+            android:text="@string/Cancel"/>
+
+        <Button
+            android:id="@+id/btnPopDone"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:textSize="@dimen/_10"
+            android:layout_height="@dimen/_20"
+            android:layout_marginTop="@dimen/_04"
+            android:layout_marginBottom="@dimen/_04"
+            android:layout_marginRight="@dimen/_10"
+            android:textColor="@color/default_green"
+            android:background="@drawable/rectangle_popup_button2"
+            android:text="Done"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

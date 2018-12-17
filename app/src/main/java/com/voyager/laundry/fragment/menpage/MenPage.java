@@ -54,7 +54,7 @@ public class MenPage extends Fragment {
         rvMen = rootView.findViewById(R.id.rvMen);
         // add a divider after each item for more clarity
         //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
-        menListAdapter = new MenListAdapter(menList);
+        menListAdapter = new MenListAdapter(menList,activity);
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rvMen.setLayoutManager(horizontalLayoutManager);
         rvMen.setAdapter(menListAdapter);
