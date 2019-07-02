@@ -10,10 +10,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.voyager.laundry.R;
+import com.voyager.laundry.activity.SelectClothes.SelectedClothes;
 import com.voyager.laundry.activity.address.PickAddress;
 import com.voyager.laundry.activity.landing.Landing;
 import com.voyager.laundry.activity.review.adapter.ClothsWashListAdapter;
 import com.voyager.laundry.activity.review.model.ClothOrderedLsit;
+import com.voyager.laundry.common.Helper;
 import com.voyager.laundry.fragment.homepage.model.OrderList;
 
 import java.util.ArrayList;
@@ -70,5 +72,49 @@ public class ReviewOrder extends AppCompatActivity {
 
     public void ivBackbtn(View v){
         finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        System.out.println("Payment onActivityResult");
+      /*  if(data!=null){
+            String orderConfirm = data.getStringExtra("orderConfirm");
+            if(orderConfirm!=null){
+                Intent previousScreen = new Intent(getApplicationContext(), DateTime.class);
+                //Sending the data to Activity_A
+                previousScreen.putExtra("orderConfirm","true");
+                setResult(1000, previousScreen);
+                finish();
+            }
+        }*/
+
+        if (requestCode == Helper.REQUEST_LOGEDIN) {
+            try{
+                if(data!=null) {
+                    String LoginDone = (String) data.getExtras().getString("orderConfirm");
+                    if (LoginDone != null) {
+                        System.out.println("onActivityResult orderConfirm has ben called ");
+                        Intent intent = getIntent();
+                        intent.putExtra("orderConfirm","true");
+                        setResult(Helper.REQUEST_LOGEDIN);
+                        //intent.putExtra("orderConfirm","true");
+                        //startActivityForResult(intent, Helper.REQUEST_LOGEDIN);
+                        finish();
+                    }
+                }else {
+                    System.out.println("LoginSignUpPage  onActivityResult null ");
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+        }else if (requestCode == Helper.REQUEST_REGISTERED){
+            System.out.println("onActivityResult REQUEST_REGISTERED has ben called ");
+            finish();
+        }
+
     }
 }

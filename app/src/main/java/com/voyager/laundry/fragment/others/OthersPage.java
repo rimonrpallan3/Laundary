@@ -55,7 +55,7 @@ public class OthersPage extends Fragment {
         rvOther = rootView.findViewById(R.id.rvOther);
         // add a divider after each item for more clarity
         //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
-        othersListAdapter = new OthersListAdapter(otherList);
+        othersListAdapter = new OthersListAdapter(otherList,activity);
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rvOther.setLayoutManager(horizontalLayoutManager);
         rvOther.setAdapter(othersListAdapter);

@@ -56,7 +56,7 @@ public class WomenPage extends Fragment {
         rvWomen = rootView.findViewById(R.id.rvWomen);
         // add a divider after each item for more clarity
         //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
-        womenListAdapter = new WomenListAdapter(womenList);
+        womenListAdapter = new WomenListAdapter(womenList,activity);
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rvWomen.setLayoutManager(horizontalLayoutManager);
         rvWomen.setAdapter(womenListAdapter);

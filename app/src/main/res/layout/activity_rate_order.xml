@@ -25,6 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_15"
+                android:onClick="ivBackbtn"
                 android:gravity="left|center"
                 android:src="@drawable/arrow_left" />
 
@@ -55,7 +56,7 @@
             android:layout_width="@dimen/_90"
             android:layout_height="@dimen/_90"
             android:layout_margin="@dimen/_20"
-            android:src="@drawable/profile" />
+            android:src="@drawable/progress5__1_" />
 
         <LinearLayout
             android:layout_width="match_parent"

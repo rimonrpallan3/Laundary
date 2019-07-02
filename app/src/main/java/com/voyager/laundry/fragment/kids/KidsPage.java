@@ -54,7 +54,7 @@ public class KidsPage extends Fragment {
         rvkids = rootView.findViewById(R.id.rvkids);
         // add a divider after each item for more clarity
         //rvHorizontalView.addItemDecoration(new DividerItemDecoration(activity, LinearLayoutManager.HORIZONTAL));
-        kidsListAdapter = new KidsListAdapter(kidsList);
+        kidsListAdapter = new KidsListAdapter(kidsList,activity);
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rvkids.setLayoutManager(horizontalLayoutManager);
         rvkids.setAdapter(kidsListAdapter);
